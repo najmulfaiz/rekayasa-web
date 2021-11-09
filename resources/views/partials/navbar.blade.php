@@ -8,13 +8,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link {{ \Request::route()->getName() == 'beranda' ? 'active' : '' }}" href="{{ route('beranda') }}">Beranda</a>
+                    <a class="nav-link {{ $title === 'Beranda' ? 'active' : '' }}" href="/">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ \Request::route()->getName() == 'profil' ? 'active' : '' }}" href="{{ route('profil') }}">Profil</a>
+                    <a class="nav-link {{ $title === 'Profil' ? 'active' : '' }}" href="/profil">Profil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ \Request::route()->getName() == 'kontak' ? 'active' : '' }}" href="{{ route('kontak') }}">Kontak</a>
+                    <a class="nav-link {{ $title === 'Kontak' ? 'active' : '' }}" href="/kontak">Kontak</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ $title === 'Berita' ? 'active' : '' }}" href="/berita">Berita</a>
                 </li>
             </ul>
         </div>
